@@ -4,16 +4,21 @@
   height: 100vh;
 }
 @font-face {
-  font-family: 'ChenYuluoyanThin';
-  src: local('ChenYuluoyanThin'), url('../public/ChenYuluoyan-Thin-Monospaced.ttf') format('truetype');
+  font-family: "ChenYuluoyanThin";
+  src: local("ChenYuluoyanThin"),
+    url("../public/ChenYuluoyan-Thin-Monospaced.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
-
-
+@font-face {
+  font-family: "taipeifont";
+  src: local("TaipeiSansTCBeta-Regular"),
+    url("../public/TaipeiSansTCBeta-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 // .outletTop{
 //   margin-top: 80px;
 // }
-

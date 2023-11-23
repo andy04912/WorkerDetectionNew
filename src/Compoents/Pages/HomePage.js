@@ -8,45 +8,42 @@ import helmet from "../../Image/helmetIMG.jpg";
 import { Link } from "react-router-dom";
 
 function HomePage() {
-	const canvasRef = useRef(null);
-	const markers = useRef([]);
+  const canvasRef = useRef(null);
+  const markers = useRef([]);
 
-	return (
-		<div className={Styles.HomePageContainer}>
-			<div className={Styles.HomePageBody}>
-				<div className={Styles.firstImgContainer}>
-					<video
-						className={Styles.detectVideo}
-						src={detectVideo}
-						autoPlay
-						loop
-						muted
-					></video>
-					<div className={Styles.textOverlay}>防護器具偵測</div>
-				</div>
+  return (
+    <div className={Styles.HomePageContainer}>
+      <div className={Styles.HomePageBody}>
+        <div className={Styles.firstImgContainer}>
+          <video
+            className={Styles.detectVideo}
+            src={detectVideo}
+            autoPlay
+            loop
+            muted
+          ></video>
+          <div className={Styles.textOverlay}>防護器具偵測</div>
+        </div>
 
-				<div className={Styles.secondImgContainer}>
-					<Image className={Styles.workerImg} src={workerImg}></Image>
-					<Link
-						to="/ProjectInformation"
-						className={Styles.secondImgtextOverlay}
-					>
-						專案介紹
-					</Link>
-				</div>
+        <div className={Styles.secondImgContainer}>
+          <Image className={Styles.workerImg} src={workerImg}></Image>
+          <Link
+            to="/ProjectInformation"
+            className={Styles.secondImgtextOverlay}
+          >
+            專案介紹
+          </Link>
+        </div>
 
-				<div className={Styles.thirdImgContainer}>
-					<Image className={Styles.cctvImg} src={helmet}></Image>
-					<Link
-						to="/ConstructionSafety"
-						className={Styles.secondImgtextOverlay}
-					>
-						工業安全
-					</Link>
-				</div>
-			</div>
-		</div>
-	);
+        <div className={Styles.thirdImgContainer}>
+          <Image className={Styles.cctvImg} src={helmet}></Image>
+          <Link to="/ConstructionSafety" className={Styles.thirdImgtextOverlay}>
+            安全衛生作業管理
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default HomePage;
