@@ -1,0 +1,160 @@
+.HomePageContainer{
+    display:grid;
+    width: 100%;
+    height: auto;
+    margin:0 auto;
+    background-color: #a8d0e6;
+    align-items: start;
+}
+
+.HomePageBody{
+    width:100%;
+    height: 100vh;
+    margin: 0 auto;
+    display:grid;
+    grid:
+    "firstImgContainer firstImgContainer secondImgContainer"
+    "firstImgContainer firstImgContainer thirdImgContainer"
+    /1fr 1fr 1fr;
+
+
+}
+
+.firstImgContainer{
+    position: relative;
+    grid-area: firstImgContainer;
+    display: grid;
+    grid:"detectVideo"
+    "textOverlay";
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    justify-items: center;
+    align-content: center;
+}
+
+
+
+.detectVideo{
+    grid-area: detectVideo;
+    width: 60%;
+}
+
+.textOverlay {
+    grid-area:textOverlay ;
+    
+    color: white; /* 例如 white, black 等 */
+    font-size: 6rem;
+    font-weight: bolder;
+    font-family: 'ChenYuluoyanThin', monospace;
+}
+
+.secondImgContainer{
+    position: relative;
+    grid-area: secondImgContainer;
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+}
+
+.secondImgtextOverlay {
+    position: absolute;
+    bottom: 10%;  /* 可調整以改變文字在圖片中的位置 */
+    left: 30%; /* 可調整以改變文字在圖片中的位置 */
+    transform: translate(-50%, -50%);
+    color: white; /* 例如 white, black 等 */
+    font-size: 3rem;
+    font-weight: bolder;
+    text-decoration: none;
+    background-color: transparent; /* 背景色透明 */
+    padding: 10px; /* 內邊距，根據需要調整 */
+    border: 2px solid transparent; /* 邊框，初始設置為透明 */
+    transition: all 0.3s ease; /* 過渡效果，使懸停效果平滑 */
+}
+/* 鼠標懸停時的樣式 */
+.secondImgtextOverlay:hover {
+    color: rgb(255, 255, 255); /* 文字顏色變為紅色 */
+    background-color: rgba(0, 0, 0, 0.2); /* 添加半透明背景 */
+
+    border-color: white; /* 邊框顏色變為白色 */
+  }
+
+.workerImg{
+    grid-area: workerImg;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thirdImgContainer{
+    position: relative;
+    grid-area: thirdImgContainer;
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.cctvImg{
+    grid-area: cctvImg;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thirdImgtextOverlay {
+    position: absolute;
+    bottom: 10%;  /* 可調整以改變文字在圖片中的位置 */
+    left: 30%; /* 可調整以改變文字在圖片中的位置 */
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255); /* 例如 white, black 等 */
+    font-size: 3rem;
+    font-weight: bolder;
+    background-color: transparent; /* 背景色透明 */
+    padding: 10px; /* 內邊距，根據需要調整 */
+    border: 2px solid transparent; /* 邊框，初始設置為透明 */
+    transition: all 0.3s ease; /* 過渡效果，使懸停效果平滑 */
+}
+
+/* 鼠標懸停時的樣式 */
+.thirdImgtextOverlay:hover {
+    color: rgb(255, 255, 255); /* 文字顏色變為紅色 */
+    background-color: rgba(0, 0, 0, 0.2); /* 添加半透明背景 */
+
+    border-color: white; /* 邊框顏色變為白色 */
+  }
+
+.homeTitle{
+    font-size: 3rem;
+}
+
+.workInfo{
+    grid-area: workInfo;
+}
+
+
+
+.cctvInfo{
+    grid-area: cctvInfo;
+}
+
+
+
+
+@media (max-width: 600px) {
+    .HomePageContainer{
+        width: 100%;
+    }
+    .HomePageBody{
+        width:100%;
+        margin: 0 auto;
+        grid:
+            "firstImgContainer"
+            "secondImgContainer"
+            "thirdImgContainer";
+    }
+    .secondImgtextOverlay{
+        font-size: 2rem;
+    }
+    .thirdImgtextOverlay{
+        font-size: 2rem;
+    }
+}

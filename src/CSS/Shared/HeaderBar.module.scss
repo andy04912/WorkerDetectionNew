@@ -1,0 +1,49 @@
+
+
+.header {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 0 20px; 
+    position: fixed; /* 固定 header 在頂部 */
+    top: 0;         /* 確保 header 在頁面最上方 */
+    width: 95%;    /* 讓 header 擴展到整個頁面的寬度 */
+    z-index: 99;   /* 確保 header 在其他元素的上方 */
+    // padding: 1rem;
+}
+
+.headerText {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 6rem;
+    font-family: 'ChenYuluoyanThin', monospace;
+    font-weight: bold;
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+.sideBar{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    z-index: 99;
+    background-color: rgb(36, 48, 94);
+    transition: width 0.3s ease-in;
+}
+
+.sideBar.open {
+    width: 100%;
+}
+
+
+@media (max-width: 600px) {
+
+    .headerText {
+        font-size: 1rem;
+    }
+}
+  
