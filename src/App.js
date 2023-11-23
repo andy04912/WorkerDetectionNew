@@ -6,6 +6,7 @@ import Header from "./Compoents/Shared/Header";
 import Footer from "./Compoents/Shared/Footer";
 
 function App() {
+	
 	return (
 		<div className={Styles.App}>
 			<Header></Header>

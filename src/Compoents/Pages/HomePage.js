@@ -31,13 +31,18 @@ function HomePage() {
 						to="/ProjectInformation"
 						className={Styles.secondImgtextOverlay}
 					>
-						防護器具偵測
+						專案介紹
 					</Link>
 				</div>
 
 				<div className={Styles.thirdImgContainer}>
 					<Image className={Styles.cctvImg} src={helmet}></Image>
-					<div className={Styles.thirdImgtextOverlay}>防護器具偵測</div>
+					<Link
+						to="/ConstructionSafety"
+						className={Styles.secondImgtextOverlay}
+					>
+						工業安全
+					</Link>
 				</div>
 			</div>
 		</div>

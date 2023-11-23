@@ -6,8 +6,9 @@ function ProjectInfo() {
 	return (
 		<div className={Styles.PageContainer}>
 			<div className={Styles.PageBody}>
-				<Image src={workFilmImg} className={Styles.workFilmImg} />
 				<span className={Styles.title}>專案介紹</span>
+				<Image src={workFilmImg} className={Styles.workFilmImg} />
+				
 				<span className={Styles.subTitle}>專案背景</span>
 				<p className={Styles.text}>
 					工地安全一直是建築行業面臨的重大挑戰。

@@ -4,10 +4,14 @@ import Styles from "../../CSS/Shared/HeaderBar.module.scss";
 import workerLogo from "../../logo_white.jpg";
 import { Button } from "react-bootstrap";
 import { BsList } from "react-icons/bs";
-
+import { useLocation } from 'react-router-dom';
 function Header() {
 	const [isOpen, setIsOpen] = useState(false);
 	const navigate = useNavigate();
+	const location = useLocation();
+    const isRootPath = location.pathname === '/';
+	const headerClass = isRootPath ? Styles.header : Styles.headerWithBG;
+	const headerLogoClass = isRootPath ? Styles.headerText : Styles.headerTextWithBG;
 	const handleClose = () => {
 		setIsOpen(false);
 	};
@@ -19,41 +23,38 @@ function Header() {
 	const GoPage = (page) => {
 		navigate(page);
 		setIsOpen(false);
+		window.scrollTo(0,0)
 	};
 
 	return (
 		<>
-			<div className={Styles.header}>
-				<Link to="/" className={Styles.headerText}>
+			<div className={headerClass}>
+				<Link to="/" className={headerLogoClass}>
 					做工的人
 				</Link>
-				<Button variant="light" onClick={handleOpen}>
+				<Button variant="light" onClick={handleOpen} className={Styles.headerBtn}>
 					<BsList></BsList>
 				</Button>
 			</div>
 			<div className={`${Styles.sideBar} ${isOpen ? Styles.open : ""}`}>
-				<Button onClick={handleClose} variant="outline-light">
+				<div><span onClick={handleClose} >
 					關閉
-				</Button>
+				</span></div>
 				<h1 className={Styles.headerText}>做工的人</h1>
-				<Button variant="outline-light" onClick={() => GoPage("/")}>
+				<span  onClick={() => GoPage("/")}>
 					主頁
-				</Button>
-				<Button
-					variant="outline-light"
-					onClick={() => GoPage("/ProjectInformation")}
+				</span>
+				<span onClick={() => GoPage("/ProjectInformation")}
 				>
 					專案介紹
-				</Button>
-				<Button
-					variant="outline-light"
-					onClick={() => GoPage("/ConstructionSafety")}
+				</span>
+				<span	onClick={() => GoPage("/ConstructionSafety")}
 				>
 					工業安全
-				</Button>
-				<Button variant="outline-light" onClick={() => GoPage("/")}>
+				</span>
+				<span  onClick={() => GoPage("/")}>
 					安全衛生作業管理
-				</Button>
+				</span>
 			</div>
 		</>
 	);
