@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/WorkerDetectionNew/static/css/main.32abd445.css",
+    "main.js": "/WorkerDetectionNew/static/js/main.bcebdd89.js",
+    "static/js/787.f6a3b3fc.chunk.js": "/WorkerDetectionNew/static/js/787.f6a3b3fc.chunk.js",
+    "static/media/detectVideo.mp4": "/WorkerDetectionNew/static/media/detectVideo.87bda3c4c44e748dc617.mp4",
+    "static/media/ChenYuluoyan-Thin-Monospaced.ttf": "/WorkerDetectionNew/static/media/ChenYuluoyan-Thin-Monospaced.42a358722916f0254964.ttf",
+    "static/media/img5.jpg": "/WorkerDetectionNew/static/media/img5.9dd200b9f34726a5658c.jpg",
+    "static/media/helmetIMG.jpg": "/WorkerDetectionNew/static/media/helmetIMG.5aad61f1ba1ed4922fd5.jpg",
+    "static/media/img3.jpg": "/WorkerDetectionNew/static/media/img3.622fab87fe9b281f9613.jpg",
+    "static/media/img2.jpg": "/WorkerDetectionNew/static/media/img2.18581fe1f758e2071fff.jpg",
+    "static/media/img1.jpg": "/WorkerDetectionNew/static/media/img1.077101581b64799df6d9.jpg",
+    "static/media/img4.jpg": "/WorkerDetectionNew/static/media/img4.2e3d6600a3a476aaa9b5.jpg",
+    "static/media/workerIMG.jpg": "/WorkerDetectionNew/static/media/workerIMG.b1e408bf447c43c21270.jpg",
+    "static/media/CCTVIMG.jpg": "/WorkerDetectionNew/static/media/CCTVIMG.98e6bf9368f00e25b7d0.jpg",
+    "static/media/workFilmImg.jpg": "/WorkerDetectionNew/static/media/workFilmImg.8092996451ba8402d7eb.jpg",
+    "static/media/logo_white.jpg": "/WorkerDetectionNew/static/media/logo_white.1cda2db75fd6ab99723a.jpg",
+    "index.html": "/WorkerDetectionNew/index.html",
+    "main.32abd445.css.map": "/WorkerDetectionNew/static/css/main.32abd445.css.map",
+    "main.bcebdd89.js.map": "/WorkerDetectionNew/static/js/main.bcebdd89.js.map",
+    "787.f6a3b3fc.chunk.js.map": "/WorkerDetectionNew/static/js/787.f6a3b3fc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.32abd445.css",
+    "static/js/main.bcebdd89.js"
+  ]
+}
