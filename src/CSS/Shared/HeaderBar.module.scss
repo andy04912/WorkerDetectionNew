@@ -1,93 +1,86 @@
-
-
 .header {
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 20px; 
-    position: fixed; /* 固定 header 在頂部 */
-    top: 0;         /* 確保 header 在頁面最上方 */
-    width: 100%;    /* 讓 header 擴展到整個頁面的寬度 */
-    z-index: 99;   /* 確保 header 在其他元素的上方 */
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  position: fixed; /* 固定 header 在頂部 */
+  top: 0; /* 確保 header 在頁面最上方 */
+  width: 100%; /* 讓 header 擴展到整個頁面的寬度 */
+  z-index: 99; /* 確保 header 在其他元素的上方 */
+  font-family: "taipeifont";
 }
 
 .headerWithBG {
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px; 
-    position: fixed; /* 固定 header 在頂部 */
-    top: 0;         /* 確保 header 在頁面最上方 */
-    width: 100%;    /* 讓 header 擴展到整個頁面的寬度 */
-    z-index: 99;   /* 確保 header 在其他元素的上方 */
-    background-color:rgb(36, 48, 94) ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed; /* 固定 header 在頂部 */
+  top: 0; /* 確保 header 在頁面最上方 */
+  width: 100%; /* 讓 header 擴展到整個頁面的寬度 */
+  z-index: 99; /* 確保 header 在其他元素的上方 */
+  background-color: rgb(36, 48, 94);
+  font-family: "taipeifont";
 }
 
 .headerText {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: 6rem;
-    font-family: 'ChenYuluoyanThin', monospace;
-    font-weight: bold;
-    text-shadow: 0.1em 0.1em 0.2em black;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 6rem;
+  font-family: "ChenYuluoyanThin", monospace;
+  font-weight: bold;
+  text-shadow: 0.1em 0.1em 0.2em black;
 }
 
 .headerTextWithBG {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: 3rem;
-    font-family: 'ChenYuluoyanThin', monospace;
-    font-weight: bold;
-    text-shadow: 0.1em 0.1em 0.2em black;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 3rem;
+  font-family: "ChenYuluoyanThin", monospace;
+  font-weight: bold;
+  text-shadow: 0.1em 0.1em 0.2em black;
 }
 
-.headerBtn{
-    background-color: rgba($color: white, $alpha: 1);
+.headerBtn {
+  background-color: rgba($color: white, $alpha: 1);
 }
 
-.sideBar{
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 0;
-    height: 100vh;
-    overflow-x: hidden;
-    z-index: 99;
-    background-color: rgb(36, 48, 94);
-    transition: width 0.3s ease-in;
-    display: grid;
-    grid:".";
-    align-items: center;
-   
+.sideBar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 100vh;
+  overflow-x: hidden;
+  z-index: 99;
+  background-color: rgb(36, 48, 94);
+  transition: width 0.3s ease-in;
+  display: grid;
+  grid: ".";
+  align-items: center;
+  font-family: "taipeifont";
 }
 
-.sideBar span{
-        color: whitesmoke;
-
-    
+.sideBar span {
+  color: whitesmoke;
+  font-size: 2rem;
 }
 
-.sideBar span:hover{
-    color:rgb(0, 153, 255);
-    cursor: pointer;
+.sideBar span:hover {
+  color: rgb(0, 153, 255);
+  cursor: pointer;
 }
 
 .sideBar.open {
-    width: 100%;
+  width: 100%;
 }
-
 
 @media (max-width: 600px) {
+  .headerText {
+    font-size: 3rem;
+  }
 
-    .headerText {
-        font-size: 3rem;
-    }
-
-    .headerBtn{
-        background-color: rgba($color: white, $alpha: 0.1);
-    }
+  .headerBtn {
+    background-color: rgba($color: white, $alpha: 0.1);
+  }
 }
-  

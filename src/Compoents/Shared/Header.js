@@ -10,6 +10,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  /**檢查是否為主頁，是就改成透明的Style */
   const isRootPath = location.pathname === "/";
   const headerClass = isRootPath ? Styles.header : Styles.headerWithBG;
   const headerLogoClass = isRootPath
@@ -24,9 +25,13 @@ function Header() {
   };
 
   const GoPage = (page) => {
-    navigate(page);
-    setIsOpen(false);
-    window.scrollTo(0, 0);
+    if (page != "URL") {
+      navigate(page);
+      setIsOpen(false);
+      window.scrollTo(0, 0);
+    } else {
+      window.open("http://140.120.90.202:8501/", "_blank", "noreferrer");
+    }
   };
 
   return (
@@ -50,12 +55,23 @@ function Header() {
           </span>
         </div>
         <h1 className={Styles.headerText}>做工的人</h1>
-        <span onClick={() => GoPage("/")}>主頁</span>
-        <span onClick={() => GoPage("/ProjectInformation")}>專案介紹</span>
-        <span onClick={() => GoPage("/ConstructionSafety")}>
-          安全衛生作業管理
-        </span>
-        <span onClick={() => GoPage("/About")}>關於我們</span>
+        <div>
+          <span onClick={() => GoPage("/")}>主頁</span>
+        </div>
+        <div>
+          <span onClick={() => GoPage("/ProjectInformation")}>專案介紹</span>
+        </div>
+        <div>
+          <span onClick={() => GoPage("URL")}>電腦視覺介面YOLOV8</span>
+        </div>
+        <div>
+          <span onClick={() => GoPage("/ConstructionSafety")}>
+            安全衛生作業管理
+          </span>
+        </div>
+        <div>
+          <span onClick={() => GoPage("/About")}>關於我們</span>
+        </div>
       </div>
     </>
   );
